@@ -36,4 +36,9 @@ git status --short
 git add learning.txt
 git diff --cached --stat | Where-Object { $_ -notmatch 'venv' }
 git diff --cached --name-status | Where-Object { $_ -notmatch 'venv' }
+git add learning.txt
+git commit -m "Clean up repo: untrack venv and cache files, update .gitignore, refine code"
+git push origin main
+git ls-files
+git status
 
