@@ -1,8 +1,10 @@
 from abc import ABC, abstractmethod
 
-## test
 
 class LLMProvider(ABC):
+    """
+    Abstract base class for Large Language Model (LLM) providers.
+    """
 
     @abstractmethod
     def chat(self, messages: list[dict]) -> str:

@@ -1,0 +1,39 @@
+# Learning Log - Commands Executed
+
+git status
+git config --list
+gh --version
+git init
+git remote add origin https://github.com/sashankaraddhi/Prompt-Enhancer.git
+git fetch origin
+git branch -a
+git checkout -b main origin/main
+git reset origin/main
+git diff base.py
+git show origin/main:base.py
+git diff .gitignore
+git status
+git branch -M main
+git branch --set-upstream-to=origin/main main
+git log -n 5
+git config user.name "sashankaraddhi"
+git config user.email "Sashankaraddhi@gmail.com"
+git add base.py
+git commit -m "Update base.py"
+git push origin main
+git status
+git ls-files
+git ls-files | Where-Object { $_ -notmatch '^venv/' }
+git rm -r --cached venv
+git rm -r --cached __pycache__
+git rm --cached .env
+git status
+python -m py_compile base.py json_parser.py main.py ollama_provider.py prompt_agent.py settings.py system_prompt.py
+git status
+git add .gitignore base.py json_parser.py settings.py .env.example learning.txt
+git status
+git status --short
+git add learning.txt
+git diff --cached --stat | Where-Object { $_ -notmatch 'venv' }
+git diff --cached --name-status | Where-Object { $_ -notmatch 'venv' }
+
